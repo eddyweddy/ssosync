@@ -18,7 +18,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/awslabs/ssosync/cmd"
+	"github.com/eddyweddy/ssosync/cmd"
 )
 
 func init() {

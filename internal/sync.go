@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/awslabs/ssosync/internal/aws"
-	"github.com/awslabs/ssosync/internal/config"
-	"github.com/awslabs/ssosync/internal/google"
+	"github.com/eddyweddy/ssosync/internal/aws"
+	"github.com/eddyweddy/ssosync/internal/config"
+	"github.com/eddyweddy/ssosync/internal/google"
 	"github.com/hashicorp/go-retryablehttp"
 
 	log "github.com/sirupsen/logrus"

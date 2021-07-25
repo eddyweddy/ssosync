@@ -1,4 +1,4 @@
-module github.com/awslabs/ssosync
+module github.com/eddyweddy/ssosync
 
 go 1.16
 
