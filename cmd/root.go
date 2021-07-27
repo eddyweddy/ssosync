@@ -174,6 +174,7 @@ func addFlags(cmd *cobra.Command, cfg *config.Config) {
 	rootCmd.Flags().StringVarP(&cfg.UserMatch, "user-match", "m", "", "Google Workspace Users filter query parameter, example: 'name:John* email:admin*', see: https://developers.google.com/admin-sdk/directory/v1/guides/search-users")
 	rootCmd.Flags().StringVarP(&cfg.GroupMatch, "group-match", "g", "", "Google Workspace Groups filter query parameter, example: 'name:Admin* email:aws-*', see: https://developers.google.com/admin-sdk/directory/v1/guides/search-groups")
 	rootCmd.Flags().StringVarP(&cfg.SyncMethod, "sync-method", "s", config.DefaultSyncMethod, "Sync method to use (users_groups|groups)")
+	rootCmd.Flags().BoolVarP(&cfg.DryRun, "dry-run", "r", config.DefaultDryRun, "Enable dry run only, no updates in AWS")
 }
 
 func logConfig(cfg *config.Config) {

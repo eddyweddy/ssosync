@@ -31,6 +31,8 @@ type Config struct {
 	IncludeGroups []string `mapstructure:"include_groups"`
 	// SyncMethod allow to defined the sync method used to get the user and groups from Google Workspace
 	SyncMethod string `mapstructure:"sync_method"`
+	// DryRun -- no updates in AWS, just run and log result
+	DryRun bool
 }
 
 const (
@@ -44,6 +46,8 @@ const (
 	DefaultGoogleCredentials = "credentials.json"
 	// DefaultSyncMethod is the default sync method to use.
 	DefaultSyncMethod = "groups"
+	// DefaultDryRun -- set to true by default. You have to disable to run for real
+	DefaultDryRun = true
 )
 
 // New returns a new Config
@@ -54,5 +58,6 @@ func New() *Config {
 		LogFormat:         DefaultLogFormat,
 		SyncMethod:        DefaultSyncMethod,
 		GoogleCredentials: DefaultGoogleCredentials,
+		DryRun:            DefaultDryRun,
 	}
 }
